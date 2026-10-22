@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CyberSession | Матриця знань</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+    <header class="site-header">
+        <a href="./index.html" class="logo">⚡ CYBERSESSION</a>
+        <button class="burger-btn" id="burgerToggle">☰</button>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="./index.html">Головна</a></li>
+            <li><a href="./matrix.html" class="active">Матриця знань</a></li>
+            <li><a href="./hub.html">Студентський Хаб</a></li>
+            <li><a href="./chill.html">Чіл-Зона</a></li>
+        </ul>
+    </header>
+
+   
+
+    <div class="container">
+        <h2 style="color: var(--neon-blue); margin-bottom: 10px;">🧠 Модуль «Матриця знань» & Чек-лист лаб</h2>
+        <p style="color: #a0a0c0; margin-bottom: 20px;">Клікніть на будь-яку тему нижче, щоб розгорнути голографічний навчальний модуль.</p>
+        
+        <input type="text" id="searchInput" placeholder="Пошук по базі матеріалів...">
+        
+        <div class="grid-cards" id="materialsGrid">
+            <div class="cyber-card" data-topic="oop">
+                <h3>Python OOP & Моделювання</h3>
+                <p>Класи, наслідування, асинхронні агенти та тестування за допомогою mock-об'єктів.</p>
+                <span style="color: var(--neon-purple); font-size: 12px;">Статус: Доступно [Клікни]</span>
+            </div>
+            <div class="cyber-card" data-topic="css">
+                <h3>CSS Grid & Flexbox Layout</h3>
+                <p>Розробка адаптивних інтерфейсів, медіа-запити та кросбраузерна верстка.</p>
+                <span style="color: var(--neon-purple); font-size: 12px;">Статус: Доступно [Клікни]</span>
+            </div>
+            <div class="cyber-card" data-topic="sql">
+                <h3>SQL Administration & Queries</h3>
+                <p>Складання складних JOIN з'єднань, оптимізація запитів та захист від ін'єкцій.</p>
+                <span style="color: var(--neon-purple); font-size: 12px;">Статус: Доступно [Клікни]</span>
+            </div>
+        </div>
+
+        <!-- Чек-лист (залишається як є) -->
+        <div class="cyber-card" style="margin-top: 40px;">
+            <h3 style="color: var(--neon-green);">✅ Чек-лист здачі лабораторних робіт</h3>
+            <ul class="task-list" id="checkList">
+                <li class="task-item"><input type="checkbox"> <span>Лабораторна №1: Налаштування середовища та макету</span></li>
+                <li class="task-item"><input type="checkbox"> <span>Лабораторна №2: Реалізація ООП структури в Python</span></li>
+                <li class="task-item"><input type="checkbox"> <span>Лабораторна №3: Написання SQL запитів та з'єднань</span></li>
+                <li class="task-item"><input type="checkbox"> <span>Лабораторна №4: Адаптивна верстка та деплой на GitHub Pages</span></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- ГОЛОГРАФІЧНЕ МОДАЛЬНЕ ВІКНО (З'являється при кліку) -->
+    <div class="modal-overlay" id="topicModal">
+        <div class="modal-content">
+            <button class="modal-close" id="closeModal">&times;</button>
+            <div class="modal-body" id="modalBodyText">
+                <!-- Контент підтягуватиметься динамічно -->
+            </div>
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>

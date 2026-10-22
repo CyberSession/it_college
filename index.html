@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CyberSession | Головний хаб</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+    <header class="site-header">
+        <a href="./index.html" class="logo">⚡ CYBERSESSION</a>
+        <button class="burger-btn" id="burgerToggle">☰</button>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="./index.html" class="active">Головна</a></li>
+            <li><a href="./matrix.html">Матриця знань</a></li>
+            <li><a href="./hub.html">Студентський Хаб</a></li>
+            <li><a href="./chill.html">Чіл-Зона</a></li>
+            <li>
+                <div class="theme-selector" style="margin: 0; align-items: center;">
+                    <div class="theme-dot" style="background: #00f0ff;" onclick="setTheme('default')" title="Кібер-блакитний"></div>
+                    <div class="theme-dot" style="background: #ff007f;" onclick="setTheme('theme-pink')" title="Неоново-рожевий"></div>
+                </div>
+            </li>
+        </ul>
+    </header>
+
+    <div class="container">
+        <section class="hero">
+            <h1>УЛЬТРАСУЧАСНИЙ СТУДЕНТСЬКИЙ ПОРТАЛ</h1>
+            <p>Централізована платформа управління академічними завданнями, проєктами та боротьбою з дедлайнами.</p>
+            <div id="session-timer" style="font-size: 18px; color: var(--neon-green); margin-bottom: 25px; font-weight: bold;">
+                ⏳ Час до завершення семестру: завантаження...
+            </div>
+            <a href="./matrix.html" class="neon-btn">Відкрити Матрицю знань</a>
+        </section>
+
+        <!-- Новий інтерактивний віджет: Генератор студентських відмазок для викладачів -->
+        <div class="cyber-card" style="margin-top: 40px; text-align: center;">
+            <h3>🤖 Генератор аргументованих виправдань перед викладачем</h3>
+            <p id="excuseText" style="font-size: 18px; color: #fff; margin: 20px 0; font-style: italic;">
+                «Натисніть кнопку, щоб згенерувати ідеальну наукову відмазку щодо здачі лабораторної роботи.»
+            </p>
+            <button class="neon-btn" id="generateExcuseBtn">Згенерувати відмазку</button>
+        </div>
+
+        <div class="grid-cards">
+            <div class="cyber-card">
+                <h3>📈 Статистика сесії</h3>
+                <p>Активних модулів: 4</p>
+                <p>Рівень стресу: Керований</p>
+                <p>Готовність до захисту: 95%</p>
+            </div>
+            <div class="cyber-card">
+                <h3>⚡ Швидкий доступ</h3>
+                <p>Миттєвий перехід до спільного хабу та обміну матеріалами між групами коледжу.</p>
+            </div>
+            <div class="cyber-card">
+                <h3>🛡️ Безпека та стан</h3>
+                <p>Всі дані кешуються у локальному сховищі браузера з гарантією збереження сесії.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>

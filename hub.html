@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CyberSession | Студентський Хаб</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+    <header class="site-header">
+        <a href="./index.html" class="logo">⚡ CYBERSESSION</a>
+        <button class="burger-btn" id="burgerToggle">☰</button>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="./index.html">Головна</a></li>
+            <li><a href="./matrix.html">Матриця знань</a></li>
+            <li><a href="./hub.html" class="active">Студентський Хаб</a></li>
+            <li><a href="./chill.html">Чіл-Зона</a></li>
+        </ul>
+    </header>
+
+    <div class="container">
+        <h2 style="color: var(--neon-purple); margin-bottom: 10px;">💬 Дошка оголошень & Тіммейти</h2>
+        <p style="color: #a0a0c0; margin-bottom: 20px;">Публікація запитів на пошук партнерів для командних проєктів.</p>
+        
+        <div class="cyber-card" style="margin-bottom: 30px;">
+            <h3>Додати нове оголошення</h3>
+            <form id="adForm">
+                <input type="text" id="adTitle" placeholder="Ваше ім'я / Група (наприклад, Соломія, КН-32)" required>
+                <textarea id="adText" placeholder="Текст оголошення (шукаю людину для спільної розробки сайту...)" rows="3" required></textarea>
+                <button type="submit" class="neon-btn" style="width: 100%; cursor: pointer;">Опублікувати</button>
+            </form>
+        </div>
+
+        <div class="grid-cards" id="adsContainer">
+            <!-- Динамічні картки -->
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>

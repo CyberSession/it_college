@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CyberSession | Чіл-Зона</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+    <header class="site-header">
+        <a href="./index.html" class="logo">⚡ CYBERSESSION</a>
+        <button class="burger-btn" id="burgerToggle">☰</button>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="./index.html">Головна</a></li>
+            <li><a href="./matrix.html">Матриця знань</a></li>
+            <li><a href="./hub.html">Студентський Хаб</a></li>
+            <li><a href="./chill.html" class="active">Чіл-Зона</a></li>
+        </ul>
+    </header>
+
+    <div class="container" style="text-align: center;">
+        <h2 style="color: var(--neon-green); margin-bottom: 10px;">☕ Антистрес-зона & Фокус-таймер</h2>
+        <p style="color: #a0a0c0; margin-bottom: 30px;">Інтерактивний кліккер енергії та інструменти релаксації.</p>
+        
+        <div class="grid-cards" style="max-width: 800px; margin: 0 auto;">
+            <!-- Кліккер кави -->
+            <div class="cyber-card" style="padding: 30px;">
+                <div id="coffeeBtn" style="font-size: 70px; cursor: pointer; user-select: none; transition: 0.1s;">☕</div>
+                <h3 style="margin-top: 20px;">Вип'єно чашок: <span id="coffeeCount" style="color: var(--neon-blue);">0</span></h3>
+                <p style="font-size: 13px; margin-top: 10px;">Кликайте для підзарядки під час дедлайну.</p>
+            </div>
+
+   <!-- Міні Помодоро таймер з вибором часу -->
+            <div class="cyber-card" style="padding: 30px;">
+                <h3 style="color: var(--neon-green);">⏱️ Фокус-Таймер</h3>
+                
+                <!-- Кнопки швидкого вибору часу -->
+                <div style="display: flex; justify-content: center; gap: 8px; margin: 15px 0;">
+                    <button class="neon-btn time-preset" data-time="15" style="padding: 6px 12px; font-size: 13px;">15 хв</button>
+                    <button class="neon-btn time-preset" data-time="25" style="padding: 6px 12px; font-size: 13px; border-color: var(--neon-green); color: var(--neon-green);">25 хв</button>
+                    <button class="neon-btn time-preset" data-time="45" style="padding: 6px 12px; font-size: 13px;">45 хв</button>
+                </div>
+
+                <div id="pomodoroTimer" style="font-size: 38px; font-weight: bold; color: #fff; margin: 15px 0;">25:00</div>
+                <button class="neon-btn" id="startPomodoro" style="width: 100%;">Запустити фокус</button>
+            </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>

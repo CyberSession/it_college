@@ -1,0 +1,354 @@
+:root {
+    --bg-color: #0a0a12;
+    --card-bg: #12121e;
+    --neon-purple: #b537f2;
+    --neon-blue: #00f0ff;
+    --neon-green: #00ff66;
+    --text-color: #e0e0e0;
+    --border-color: #2a2a40;
+}
+
+/* Динамічні теми */
+body.theme-pink {
+    --neon-blue: #ff007f;
+    --neon-green: #ffcc00;
+}
+
+body.theme-blue {
+    --neon-blue: #0088ff;
+    --neon-green: #00ffcc;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow-x: hidden;
+    transition: background 0.3s ease;
+}
+
+/* ШАПКА ТА НАВІГАЦІЯ */
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background: rgba(18, 18, 30, 0.95);
+    backdrop-filter: blur(15px);
+    border-bottom: 1px solid var(--border-color);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--neon-blue);
+    text-shadow: 0 0 12px var(--neon-blue);
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+    align-items: center;
+}
+
+.nav-links a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s;
+    font-size: 15px;
+}
+
+.nav-links a:hover, .nav-links a.active {
+    color: var(--neon-blue);
+    text-shadow: 0 0 8px var(--neon-blue);
+}
+
+.burger-btn {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--neon-blue);
+    font-size: 28px;
+    cursor: pointer;
+}
+
+/* КОНТЕЙНЕРИ */
+.container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+/* ГЕРОЙ-СЕКЦІЯ */
+.hero {
+    text-align: center;
+    padding: 70px 20px;
+    background: linear-gradient(135deg, rgba(181,55,242,0.08), rgba(0,240,255,0.08));
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    box-shadow: 0 0 40px rgba(0, 240, 255, 0.05);
+    position: relative;
+    overflow: hidden;
+}
+
+.hero h1 {
+    font-size: 42px;
+    margin-bottom: 15px;
+    color: #fff;
+    text-shadow: 0 0 15px var(--neon-blue);
+}
+
+.hero p {
+    font-size: 18px;
+    color: #a0a0c0;
+    margin-bottom: 30px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.neon-btn {
+    display: inline-block;
+    padding: 12px 30px;
+    background: transparent;
+    color: var(--neon-blue);
+    border: 2px solid var(--neon-blue);
+    border-radius: 8px;
+    font-weight: bold;
+    text-decoration: none;
+    box-shadow: 0 0 12px rgba(0, 240, 255, 0.2);
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.neon-btn:hover {
+    background: var(--neon-blue);
+    color: var(--bg-color);
+    box-shadow: 0 0 25px var(--neon-blue);
+}
+
+/* СІТКИ ТА КАРТКИ */
+.grid-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.cyber-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    padding: 30px;
+    border-radius: 14px;
+    transition: 0.3s;
+    position: relative;
+}
+
+.cyber-card:hover {
+    border-color: var(--neon-blue);
+    box-shadow: 0 0 25px rgba(0, 240, 255, 0.15);
+    transform: translateY(-5px);
+}
+
+.cyber-card h3 {
+    color: var(--neon-green);
+    margin-bottom: 12px;
+    font-size: 20px;
+}
+
+.cyber-card p {
+    color: #b0b0d0;
+    font-size: 15px;
+    margin-bottom: 15px;
+}
+
+/* ІНТЕРАКТИВНИЙ ЧЕК-ЛИСТ (Трекер завдань) */
+.task-list {
+    list-style: none;
+    margin-top: 15px;
+}
+
+.task-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+    cursor: pointer;
+}
+
+.task-item input[type="checkbox"] {
+    accent-color: var(--neon-green);
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+}
+
+.task-item.completed span {
+    text-decoration: line-through;
+    color: #555577;
+}
+
+/* ФОРМИ ТА КНОПКИ ВИБОРУ ТЕМИ */
+input, textarea, select {
+    width: 100%;
+    padding: 14px;
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    color: #fff;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    font-size: 15px;
+}
+
+input:focus, textarea:focus {
+    border-color: var(--neon-blue);
+    outline: none;
+    box-shadow: 0 0 12px rgba(0, 240, 255, 0.3);
+}
+
+.theme-selector {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.theme-dot {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid #fff;
+}
+
+/* МОБІЛЬНИЙ АДАПТИВ */
+@media screen and (max-width: 768px) {
+    .site-header {
+        padding: 15px 20px;
+    }
+
+    .burger-btn {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: var(--card-bg);
+        border-bottom: 1px solid var(--border-color);
+        padding: 25px 0;
+        text-align: center;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .hero h1 {
+        font-size: 28px;
+    }
+}
+
+
+/* МОДАЛЬНЕ ВІКНО ДЛЯ ТЕМ (Голо-екран) */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(10, 10, 18, 0.85);
+    backdrop-filter: blur(8px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.modal-overlay.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.modal-content {
+    background: var(--card-bg);
+    border: 2px solid var(--neon-blue);
+    box-shadow: 0 0 30px rgba(0, 240, 255, 0.3);
+    width: 90%;
+    max-width: 700px;
+    padding: 35px;
+    border-radius: 16px;
+    position: relative;
+    transform: translateY(20px);
+    transition: transform 0.3s ease;
+    max-height: 85vh;
+    overflow-y: auto;
+}
+
+.modal-overlay.active .modal-content {
+    transform: translateY(0);
+}
+
+.modal-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    color: var(--neon-blue);
+    font-size: 24px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.modal-close:hover {
+    color: var(--neon-purple);
+    text-shadow: 0 0 10px var(--neon-purple);
+}
+
+.modal-body h2 {
+    color: var(--neon-green);
+    margin-bottom: 15px;
+}
+
+.modal-body p {
+    color: #c0c0e0;
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.code-snippet {
+    background: #05050a;
+    border: 1px dashed var(--border-color);
+    padding: 15px;
+    border-radius: 8px;
+    font-family: monospace;
+    color: var(--neon-blue);
+    margin: 15px 0;
+    overflow-x: auto;
+}
+
+/* Робимо картки в матриці клікабельними */
+#materialsGrid .cyber-card {
+    cursor: pointer;
+}
